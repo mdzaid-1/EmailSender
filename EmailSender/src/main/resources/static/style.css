@@ -1,11 +1,10 @@
-/* Reset default browser styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-/* Application Title */
 .app-title {
     text-align: center;
     font-size: 48px;
@@ -18,7 +17,6 @@
     transform: translateX(-50%);
 }
 
-/* Body Styling */
 body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
@@ -28,7 +26,6 @@ body {
     padding: 20px;
 }
 
-/* Container Box */
 .container {
     background: rgb(247, 234, 234);
     padding: 30px;
@@ -40,7 +37,6 @@ body {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Title */
 h2 {
     margin-bottom: 15px;
     font-size: 22px;
@@ -48,14 +44,12 @@ h2 {
     color: #333;
 }
 
-/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Labels */
 label {
     font-size: 14px;
     font-weight: 500;
@@ -63,7 +57,6 @@ label {
     text-align: left;
 }
 
-/* Input and Textarea */
 input, textarea, button {
     width: 100%;
     padding: 12px;
@@ -73,25 +66,21 @@ input, textarea, button {
     transition: all 0.3s ease;
 }
 
-/* Focus Effect */
 input:focus, textarea:focus {
     border-color: #764ba2;
     outline: none;
     box-shadow: 0 0 5px rgba(118, 75, 162, 0.3);
 }
 
-/* Textarea */
 textarea {
     height: 100px;
     resize: none;
 }
 
-/* File Input */
 input[type="file"] {
     padding: 5px;
 }
 
-/* Buttons */
 button {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
@@ -105,7 +94,6 @@ button:hover {
     background: linear-gradient(135deg, #5a67d8, #6b46c1);
 }
 
-/* Response Message */
 #responseMessage {
     margin-top: 10px;
     font-weight: bold;
@@ -113,13 +101,11 @@ button:hover {
     font-size: 14px;
 }
 
-/* Selection Page Buttons */
 .container button {
     margin-top: 10px;
     padding: 12px;
 }
 
-/* Fade In Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
