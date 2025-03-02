@@ -35,7 +35,6 @@ public class EmailController {
     }
 
 
-    // Send email with attachment
     @PostMapping("/send-with-attachment")
     public String sendEmailWithAttachment(@RequestParam("to") String to,
                                           @RequestParam("subject") String subject,
