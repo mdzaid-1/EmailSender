@@ -18,7 +18,6 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    // Send email to a single recipient
     public String sendSimpleEmail(String to, String subject, String text) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
@@ -35,7 +34,6 @@ public class EmailService {
         }
     }
 
-    // Send email to multiple recipients
     public String sendEmailToMultiple(String[] recipients, String subject, String text) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
@@ -55,13 +53,12 @@ public class EmailService {
     public String sendEmailWithAttachment(String to, String subject, String text, MultipartFile file) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true); // "true" enables attachments
+            MimeMessageHelper helper = new MimeMessageHelper(message, true); 
 
             helper.setTo(to);
             helper.setSubject(subject);
-            helper.setText(text, true);  // Enables HTML content
+            helper.setText(text, true);  
 
-            // ✅ Attach file if available
             if (file != null && !file.isEmpty()) {
                 helper.addAttachment(file.getOriginalFilename(), new ByteArrayResource(file.getBytes()));
             }
